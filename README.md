@@ -75,19 +75,14 @@ const arijit = {
 <div align="center">
   <img src="https://user-images.190/212741999-016fddbd-617a-4448-8042-0ecf907aea25.gif" width="400">
 </div>
-
 <div align="center">
-  <a href="https://sarss-chi.vercel.app/">
-    <img src="https://arijitghosal.tech/ck.png"  width ="500"  height="auto" />
-  </a>
+  <img src="https://user-images.githubusercontent.com/74038190/212746035-d5c61762-973c-44c0-aec7-887f3b7690e3.gif" width="400">
 </div>
 
 <h3 align="center">Campus Konnect - Your College Community Hub</h3>
 <p align="center">A fully-featured college community platform built with Next.js, Firebase and Python</p>
 
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/212746035-d5c61762-973c-44c0-aec7-887f3b7690e3.gif" width="400">
-</div>
+
 
 <h2>📊 GitHub Stats</h2>
 
