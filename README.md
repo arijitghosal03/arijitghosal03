@@ -1,6 +1,4 @@
-<div align="center">
-  <img height="250" src="https://capsule-render.vercel.app/api?type=cylinder&height=100&text=Hey%20there!&animation=fadeIn&fontColor=fff&color=gradient&customColorList=0,7,7,5,30"/>
-</div>
+
 
 <h1 align="center">
   <a href="https://arijitghosal.tech">
