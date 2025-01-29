@@ -1,101 +1,109 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
-  <!-- Definitions -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <!-- Definitions for patterns and filters -->
   <defs>
-    <linearGradient id="bodyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#FFFFFF"/>
-      <stop offset="100%" style="stop-color:#F0F4FF"/>
-    </linearGradient>
-    <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#60A5FA"/>
-      <stop offset="100%" style="stop-color:#3B82F6"/>
+    <!-- Glow effect for power pellets -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Ghost gradient -->
+    <linearGradient id="ghostGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF0000"/>
+      <stop offset="100%" style="stop-color:#FF6666"/>
     </linearGradient>
   </defs>
 
-  <!-- Chat Bubbles Animation -->
-  <g transform="translate(280,100)">
-    <rect width="100" height="40" rx="20" fill="#E2E8F0" opacity="0">
-      <animate attributeName="opacity" values="0;1;0" dur="4s" begin="0s" repeatCount="indefinite"/>
-    </rect>
-    <text x="20" y="25" font-size="12" fill="#1E293B" opacity="0">
-      Hello!
-      <animate attributeName="opacity" values="0;1;0" dur="4s" begin="0s" repeatCount="indefinite"/>
-    </text>
-  </g>
-  
-  <g transform="translate(280,150)">
-    <rect width="120" height="40" rx="20" fill="#E2E8F0" opacity="0">
-      <animate attributeName="opacity" values="0;1;0" dur="4s" begin="4s" repeatCount="indefinite"/>
-    </rect>
-    <text x="20" y="25" font-size="12" fill="#1E293B" opacity="0">
-      How can I help?
-      <animate attributeName="opacity" values="0;1;0" dur="4s" begin="4s" repeatCount="indefinite"/>
-    </text>
-  </g>
-
-  <!-- Main Bot Body -->
-  <g transform="translate(200,250)">
-    <!-- Glow Effect -->
-    <circle r="120" fill="none" stroke="url(#glowGradient)" stroke-width="2" opacity="0.5">
-      <animate attributeName="r" values="120;125;120" dur="3s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite"/>
-    </circle>
-
-    <!-- Body -->
-    <path d="M-60 -40 L60 -40 Q80 -40 80 -20 L80 60 Q80 80 60 80 L-60 80 Q-80 80 -80 60 L-80 -20 Q-80 -40 -60 -40" 
-          fill="url(#bodyGradient)" stroke="#3B82F6" stroke-width="2"/>
-
-    <!-- Head -->
-    <circle cx="0" cy="0" r="70" fill="url(#bodyGradient)" stroke="#3B82F6" stroke-width="2"/>
-
-    <!-- Animated Eyes -->
-    <g id="eyes">
-      <circle cx="-25" cy="-10" r="15" fill="#3B82F6">
-        <animate attributeName="r" values="15;12;15" dur="2s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="25" cy="-10" r="15" fill="#3B82F6">
-        <animate attributeName="r" values="15;12;15" dur="2s" repeatCount="indefinite"/>
-      </circle>
-      <!-- Eye Gleams -->
-      <circle cx="-20" cy="-15" r="5" fill="#FFFFFF"/>
-      <circle cx="30" cy="-15" r="5" fill="#FFFFFF"/>
+  <!-- Background Grid (Contribution-like pattern) -->
+  <g id="contribution-grid">
+    <!-- Week rows -->
+    <g id="cells" fill="#39d353">
+      <!-- Dynamic contribution cells with varying intensities -->
+      <rect x="50" y="20" width="15" height="15" rx="2" fill="#0e4429"/>
+      <rect x="70" y="20" width="15" height="15" rx="2" fill="#006d32"/>
+      <rect x="90" y="20" width="15" height="15" rx="2" fill="#26a641"/>
+      <rect x="110" y="20" width="15" height="15" rx="2" fill="#39d353"/>
+      
+      <rect x="50" y="40" width="15" height="15" rx="2" fill="#26a641"/>
+      <rect x="70" y="40" width="15" height="15" rx="2" fill="#006d32"/>
+      <rect x="90" y="40" width="15" height="15" rx="2" fill="#0e4429"/>
+      <rect x="110" y="40" width="15" height="15" rx="2" fill="#26a641"/>
+      
+      <!-- Pattern continues... -->
+      <rect x="650" y="140" width="15" height="15" rx="2" fill="#39d353"/>
+      <rect x="670" y="140" width="15" height="15" rx="2" fill="#26a641"/>
+      <rect x="690" y="140" width="15" height="15" rx="2" fill="#006d32"/>
+      <rect x="710" y="140" width="15" height="15" rx="2" fill="#0e4429"/>
     </g>
+  </g>
 
-    <!-- Animated Antenna -->
-    <g id="antenna">
-      <path d="M-10 -70 Q0 -90 10 -70" stroke="#3B82F6" stroke-width="3" fill="none">
-        <animate attributeName="d" 
-                values="M-10 -70 Q0 -90 10 -70;M-10 -70 Q0 -85 10 -70;M-10 -70 Q0 -90 10 -70" 
-                dur="2s" repeatCount="indefinite"/>
-      </path>
-      <circle cx="0" cy="-90" r="5" fill="#60A5FA">
-        <animate attributeName="opacity" values="1;0.5;1" dur="1s" repeatCount="indefinite"/>
-      </circle>
-    </g>
+  <!-- Pac-Man -->
+  <g transform="translate(0, 80)">
+    <path id="pacman" fill="yellow" d="M30 0A30 30 0 1 1 30 60A30 30 0 1 1 30 0">
+      <!-- Chomping animation -->
+      <animate attributeName="d" 
+               values="M30 0A30 30 0 1 1 30 60A30 30 0 1 1 30 0L30 30Z;
+                       M30 0A30 30 0 1 1 30 60A30 30 0 1 1 30 0L30 30L30 30Z;
+                       M30 0A30 30 0 1 1 30 60A30 30 0 1 1 30 0L30 30Z"
+               dur="0.5s" repeatCount="indefinite"/>
+      <!-- Movement animation -->
+      <animateTransform attributeName="transform"
+                        type="translate"
+                        from="0 0" to="750 0"
+                        dur="15s" repeatCount="indefinite"/>
+    </path>
+  </g>
 
-    <!-- Center Circle -->
-    <circle cx="0" cy="30" r="15" fill="#60A5FA">
-      <animate attributeName="r" values="15;17;15" dur="2s" repeatCount="indefinite"/>
+  <!-- Power Pellets -->
+  <g>
+    <circle cx="200" cy="110" r="8" fill="white" filter="url(#glow)">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="110" r="8" fill="white" filter="url(#glow)">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="110" r="8" fill="white" filter="url(#glow)">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite"/>
     </circle>
   </g>
 
-  <!-- Processing Dots -->
-  <g transform="translate(180,400)">
-    <circle cx="0" cy="0" r="5" fill="#3B82F6">
-      <animate attributeName="opacity" values="0;1;0" dur="1.5s" begin="0s" repeatCount="indefinite"/>
+  <!-- Ghost -->
+  <g transform="translate(700, 110)">
+    <path d="M-15 0C-15 -15 15 -15 15 0C15 15 -15 15 -15 0Z M-15 0L-15 15L-10 10L-5 15L0 10L5 15L10 10L15 15L15 0Z" 
+          fill="url(#ghostGradient)">
+      <!-- Ghost movement -->
+      <animateTransform attributeName="transform"
+                        type="translate"
+                        values="0 0; -10 -5; 0 0"
+                        dur="2s"
+                        repeatCount="indefinite"/>
+    </path>
+    <!-- Ghost eyes -->
+    <circle cx="-6" cy="-2" r="3" fill="white"/>
+    <circle cx="6" cy="-2" r="3" fill="white"/>
+    <circle cx="-4" cy="-2" r="1" fill="blue"/>
+    <circle cx="8" cy="-2" r="1" fill="blue"/>
+  </g>
+
+  <!-- Small Dots -->
+  <g>
+    <circle cx="150" cy="110" r="3" fill="white">
+      <animate attributeName="opacity" values="1;0" dur="15s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="20" cy="0" r="5" fill="#3B82F6">
-      <animate attributeName="opacity" values="0;1;0" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
+    <circle cx="300" cy="110" r="3" fill="white">
+      <animate attributeName="opacity" values="1;0" dur="15s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="40" cy="0" r="5" fill="#3B82F6">
-      <animate attributeName="opacity" values="0;1;0" dur="1.5s" begin="1s" repeatCount="indefinite"/>
+    <circle cx="450" cy="110" r="3" fill="white">
+      <animate attributeName="opacity" values="1;0" dur="15s" repeatCount="indefinite"/>
     </circle>
   </g>
 
-  <!-- Status Indicator -->
-  <g transform="translate(200,450)">
-    <text x="-40" y="0" font-size="14" fill="#3B82F6" text-anchor="middle">
-      Active
-      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
-    </text>
-  </g>
+  <!-- Score Text -->
+  <text x="40" y="180" font-family="monospace" font-size="20" fill="#39d353">
+    SCORE: 
+    <animate attributeName="textContent" values="0;100;200;300;400" dur="15s" repeatCount="indefinite"/>
+  </text>
 </svg>
