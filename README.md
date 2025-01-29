@@ -17,14 +17,17 @@
 <div align="center">
   <a href="mailto:arijitghosal0309@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
   <a href="https://arijitghosal.tech"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=About.me&logoColor=white"></a>
-  <a href="https://www.linkedin.com/in/your-profile"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
-  <img src="https://img.shields.io/badge/Phone-+91--7586929238-green?style=for-the-badge&logo=whatsapp&logoColor=white"/>
+  <a href="https://www.linkedin.com/in/arijit-ghosal-b80257214/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+ 
 </div>
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
 </div>
 
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="400">
+</div>
 <h2>🚀 About Me </h2>
 
 ```javascript
@@ -48,8 +51,9 @@ const arijit = {
 ```
 
 <!-- Option 1: Classic Arcade Style -->
+
 <div align="center">
-  <img src="https://raw.githubusercontent.com/YasinDehfuli/YasinDehfuli/e722436d10438d6a7b726058472e9436738e7559/pacman.svg" width="400">
+  <img src="https://user-images.githubusercontent.com/74038190/212284087-bbe7e430-757e-4901-90bf-4cd2ce3e1852.gif" width="100">
 </div>
 
 <!-- Option 2: Neon Style -->
@@ -104,5 +108,10 @@ const arijit = {
 <div align="center">
   <img src="https://komarev.com/ghpvc/?username=arijitghosal03&style=for-the-badge&color=blueviolet"/>
 </div>
+<br/><br/><br/>
+</div>
 
+<div align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" />
+</div>
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=120&section=footer&animation=twinkling&fontSize=70"/>
