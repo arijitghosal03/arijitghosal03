@@ -95,7 +95,8 @@ const arijit = {
 <div align="center">
   <h2>🎮 Let's Play Pong!</h2>
   <a href="https://github.com/arijitghosal03">
-    <img src="https://raw.githubusercontent.com/arijitghosal03/arijitghosal03/main/bot.svg" alt="Chatbot" width="400px">
+  <img src="https://github.com/Carol42/Carol42/blob/main/assets/github-contribution-grid-snake.svg" alt="Contribution Graph Snake">
+
   </a>
 </div>
 
