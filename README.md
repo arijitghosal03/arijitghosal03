@@ -1,5 +1,5 @@
 <div align="center">
-  <img height="350" src="https://camo.githubusercontent.com/c44aa3ffec5fec6fe5f398ffe8a6c6dfabfc2b6851b25481bad730bffd4d03c0/68747470733a2f2f63617073756c652d72656e6465722e76657263656c2e6170702f6170693f747970653d76656e6f6d266865696768743d32303026746578743d48656c6c6f253230576f726c642126646573633d57656c636f6d65253230746f2532306d7925323047697448756225323050726f66696c6526616e696d6174696f6e3d66616465496e26666f6e74436f6c6f723d66666626636f6c6f723d6772616469656e74"/>
+  <img height="250" src="https://capsule-render.vercel.app/api?type=cylinder&height=100&text=Hey%20there!&animation=fadeIn&fontColor=fff&color=gradient&customColorList=0,7,7,5,30"/>
 </div>
 
 <h1 align="center">
@@ -49,8 +49,14 @@ const arijit = {
 };
 ```
 
+<!-- Option 1: Classic Arcade Style -->
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/212747107-5b654ba5-31c6-4366-b42b-51b822e9bc52.gif" width="400">
+  <img src="https://raw.githubusercontent.com/YasinDehfuli/YasinDehfuli/e722436d10438d6a7b726058472e9436738e7559/pacman.svg" width="400">
+</div>
+
+<!-- Option 2: Neon Style -->
+<div align="center">
+  <img src="https://raw.githubusercontent.com/YasinDehfuli/YasinDehfuli/main/pac_man.gif" width="400">
 </div>
 
 <h2>💻 Tech Stack</h2>
@@ -88,17 +94,10 @@ const arijit = {
 <h2>📊 GitHub Stats</h2>
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=arijitghosal03&theme=radical" width="48%" alt="streak"/>
+
   <img src="https://github-readme-stats.vercel.app/api?username=arijitghosal03&theme=radical&show_icons=true" width="48%" alt="stats"/>
 </div>
 
-<div align="center">
-  <h2>🎮 Let's Play Pong!</h2>
-  <a href="https://github.com/arijitghosal03">
-  <img src="https://github.com/Carol42/Carol42/blob/main/assets/github-contribution-grid-snake.svg" alt="Contribution Graph Snake">
-
-  </a>
-</div>
 
 <div align="center">
   <img src="https://user-images.190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="400">
